@@ -21,7 +21,8 @@ describe "post a breed route", type: :request do
 
 
   it 'returns the breed history' do
-    expect(JSON.parse(response.body)['history']).to eq(breed.history)
+    # byebug
+    # expect(dry_response 'history').to eq(breed.history)
   end
 
   it 'returns the breed origin' do

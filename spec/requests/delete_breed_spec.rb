@@ -11,9 +11,8 @@ describe "destroy breed route", type: :request do
     expect(response.status).to eq 200
   end
 
-
   it 'should delete the breed' do
     expect(Breed.all[0]).to eq @breed2
   end
-  
+
 end
