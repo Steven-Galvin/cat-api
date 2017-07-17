@@ -11,17 +11,33 @@ class BreedsController < ApplicationController
 
   def create
     @breed = Breed.create!(breed_params)
-    json_response(@breed)
+    json_response(@breed, :created)
   end
 
   def update
     @breeds = Breed.find(params[:id])
-    @breeds.update(breed_params)
+    if  @breeds.update!(breed_params)
+      render status: 200, json: {
+        message: "breed successfully updated"
+      }
+    else
+      render status: 503, json: {
+        message: "service not available"
+      }
+    end
   end
 
   def destroy
     @breeds = Breed.find(params[:id])
-    @breeds.destroy
+    if @breeds.destroy
+      render status: 200, json: {
+        message: "breed destroyed"
+      }
+    else
+      render status: 503, json: {
+        message: "service not available"
+      }
+    end
   end
 
   private

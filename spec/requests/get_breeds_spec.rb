@@ -1,0 +1,15 @@
+require 'rails_helper'
+
+describe "get all breeds route", type: :request do
+  let!(:breeds) {FactoryGirl.create_list(:breed, 5)}
+
+  before { get '/breeds' }
+
+  it 'returns all breeds' do
+    expect(JSON.parse(response.body).size).to eq (5)
+  end
+
+  it 'returns status code 200' do
+    expect(response).to have_http_status(:success)
+  end
+end
