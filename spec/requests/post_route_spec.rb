@@ -16,37 +16,36 @@ describe "post a breed route", type: :request do
   end
 
   it 'returns the breed name' do
-    expect(JSON.parse(response.body)['name']).to eq(breed.name)
+    expect(jsonParse['name']).to eq(breed.name)
   end
 
 
   it 'returns the breed history' do
-    # byebug
-    # expect(dry_response 'history').to eq(breed.history)
+    expect(jsonParse['history']).to eq(breed.history)
   end
 
   it 'returns the breed origin' do
-    expect(JSON.parse(response.body)['origin']).to eq(breed.origin)
+    expect(jsonParse['origin']).to eq(breed.origin)
   end
 
   it 'returns the breed common_name' do
-    expect(JSON.parse(response.body)['common_name']).to eq(breed.common_name)
+    expect(jsonParse['common_name']).to eq(breed.common_name)
   end
 
   it 'returns the breed characteristics' do
-    expect(JSON.parse(response.body)['characteristics']).to eq(breed.characteristics)
+    expect(jsonParse['characteristics']).to eq(breed.characteristics)
   end
 
   it 'returns the breed image' do
-    expect(JSON.parse(response.body)['image']).to eq(breed.image)
+    expect(jsonParse['image']).to eq(breed.image)
   end
 
   it 'returns the breed variations' do
-    expect(JSON.parse(response.body)['variations']).to eq(breed.variations)
+    expect(jsonParse['variations']).to eq(breed.variations)
   end
 
   it 'returns the breed fun_fact' do
-    expect(JSON.parse(response.body)['fun_fact']).to eq(breed.fun_fact)
+    expect(jsonParse['fun_fact']).to eq(breed.fun_fact)
   end
 
   it 'returns a created status' do

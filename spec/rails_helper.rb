@@ -28,3 +28,7 @@ end
 #     with.library :rails
 #   end
 # end
+
+def jsonParse
+  JSON.parse(response.body)
+end
