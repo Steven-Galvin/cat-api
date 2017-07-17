@@ -41,9 +41,6 @@ class BreedsController < ApplicationController
   end
 
   private
-  def json_response(object)
-    render json: object, status: :ok
-  end
 
   def breed_params
     params.permit(:name, :origin, :common_name, :characteristics, :image, :fun_fact, :variations, :history)
