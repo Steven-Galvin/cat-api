@@ -15,8 +15,8 @@ class BreedsController < ApplicationController
   end
 
   def update
-    @breeds = Breed.find(params[:id])
-    if  @breeds.update!(breed_params)
+    @breed = Breed.find(params[:id])
+    if  @breed.update!(breed_params)
       render status: 200, json: {
         message: "breed successfully updated"
       }
@@ -28,8 +28,8 @@ class BreedsController < ApplicationController
   end
 
   def destroy
-    @breeds = Breed.find(params[:id])
-    if @breeds.destroy
+    @breed = Breed.find(params[:id])
+    if @breed.destroy
       render status: 200, json: {
         message: "breed destroyed"
       }
