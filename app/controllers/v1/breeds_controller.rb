@@ -5,7 +5,7 @@ class V1::BreedsController < ApplicationController
     # origin = params[:origin]
     # @breeds = Breed.origin(origin)
     @breeds = Breed.name_search(name)
-    json_response(@breeds)
+    json_response(@breeds.page(params[:page]))
   end
 
   def show
