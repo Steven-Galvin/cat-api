@@ -7,6 +7,6 @@ class Breed < ApplicationRecord
 
 
 # PAGINATION
-  paginates_per 1
-  max_paginates_per 1
+  paginates_per 10
+  max_paginates_per 10
 end
