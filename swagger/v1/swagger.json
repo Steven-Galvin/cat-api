@@ -1,0 +1,145 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "v1/breeds": {
+      "post": {
+        "summary": "Creates a breed",
+        "tags": [
+          "Breeds"
+        ],
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "breed",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "origin": {
+                  "type": "string"
+                },
+                "common_name": {
+                  "type": "string"
+                },
+                "characteristics": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "fun_fact": {
+                  "type": "string"
+                },
+                "variations": {
+                  "type": "string"
+                },
+                "history": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "origin",
+                "common_name",
+                "characteristics",
+                "image",
+                "fun_fact",
+                "variations",
+                "history"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "breed created"
+          },
+          "422": {
+            "description": "invalid request"
+          }
+        }
+      }
+    },
+    "v1/breeds/{id}": {
+      "get": {
+        "summary": "Retrieves a breed",
+        "tags": [
+          "Breeds"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "breed found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "origin": {
+                  "type": "string"
+                },
+                "common_name": {
+                  "type": "string"
+                },
+                "characteristics": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "fun_fact": {
+                  "type": "string"
+                },
+                "variations": {
+                  "type": "string"
+                },
+                "history": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "origin",
+                "common_name",
+                "characteristics",
+                "image",
+                "fun_fact",
+                "variations",
+                "history"
+              ]
+            }
+          },
+          "404": {
+            "description": "breed not found"
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,8 +14,13 @@ class V1::BreedsController < ApplicationController
   end
 
   def create
-    @breed = Breed.create!(breed_params)
-    json_response(@breed, :created)
+    if @breed = Breed.create!(breed_params)
+      json_response(@breed, :created)
+    else
+      render status: 422, json: {
+        message: "create breed failed"
+      }
+    end
   end
 
   def update

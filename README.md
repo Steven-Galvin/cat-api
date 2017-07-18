@@ -8,10 +8,10 @@
 
 # _Endpoints_
 
-* _`Get` breeds_
-* _`Get` breeds/:id_
-* _`Get` breeds/?attr_name=_
-* _`Get` breeds/?attr_name=_
+* _`Get` /v1/breeds_
+* _`Get` /v1/breeds/:id_
+* _`Get` /v1/breeds/?attr_name=search_params_
+<!-- * _`Get` /v1/breeds/?attr_name=_ -->
 
 
 ## Setup/Installation Requirements
