@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  resources :breeds
+  concern :api_base do
+    resources :breeds
+  end
+
+  namespace :v1 do
+    concerns :api_base
+  end
+  
 end

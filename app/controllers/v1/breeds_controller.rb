@@ -1,4 +1,4 @@
-class BreedsController < ApplicationController
+class V1::BreedsController < ApplicationController
   def index
     @breeds = Breed.all
     name = params[:name]

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "update breed request", type: :request do
   before do
     breed = FactoryGirl.create(:breed)
-    put "/breeds/#{breed.id}/?name=tom cat"
+    put "/v1/breeds/#{breed.id}/?name=tom cat"
   end
 
   it 'should return status 200' do

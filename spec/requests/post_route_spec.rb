@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "post a breed route", type: :request do
   breed = FactoryGirl.build(:breed)
   before do
-    post '/breeds', params: {
+    post '/v1/breeds', params: {
       name: breed.name,
       history: breed.history,
       origin: breed.origin,
