@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
-  
+
   concern :api_base do
     resources :breeds
   end
@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     concerns :api_base
   end
 
+  root to: 'v1/breeds#index'
 end
