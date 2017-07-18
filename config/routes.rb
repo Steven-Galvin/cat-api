@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
 
   concern :api_base do
-    resources :breeds
+    resources :breeds, concerns: :paginatable
+  end
+
+  concern :paginatable do
+    get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
   namespace :v1 do
