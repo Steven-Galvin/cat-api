@@ -29,6 +29,8 @@ end
 #   end
 # end
 
+
+# helper method avail to specs 
 def jsonParse
   JSON.parse(response.body)
 end

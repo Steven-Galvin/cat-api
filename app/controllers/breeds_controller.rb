@@ -1,6 +1,10 @@
 class BreedsController < ApplicationController
   def index
     @breeds = Breed.all
+    name = params[:name]
+    # origin = params[:origin]
+    # @breeds = Breed.origin(origin)
+    @breeds = Breed.name_search(name)
     json_response(@breeds)
   end
 
