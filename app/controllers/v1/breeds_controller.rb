@@ -1,4 +1,6 @@
 class V1::BreedsController < ApplicationController
+  before_action :authenticate_request!
+
   def index
     @breeds = Breed.all
     name = params[:name]

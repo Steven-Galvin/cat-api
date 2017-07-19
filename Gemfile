@@ -20,6 +20,8 @@ gem 'puma', '~> 3.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rswag'
 gem 'kaminari'
+gem 'jwt'
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

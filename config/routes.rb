@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
 
   concern :api_base do
     resources :breeds, concerns: :paginatable
+    post 'auth_user' => 'authentication#authenticate_user'
+    get 'home' => 'home#index'
   end
 
   concern :paginatable do
@@ -15,4 +18,5 @@ Rails.application.routes.draw do
   end
 
   root to: 'v1/breeds#index'
+
 end

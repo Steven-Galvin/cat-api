@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :user do
+    
+  end
   factory(:breed) do
     name('Kitty Cat')
     origin("Thailand")
