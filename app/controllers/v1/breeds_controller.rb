@@ -7,8 +7,8 @@ class V1::BreedsController < ApplicationController
     @breeds = Breed.name_search(name)
     # origin = params[:origin]
     # @breeds = Breed.origin(origin)
-    # json_response(@breeds.page(params[:page]))
-    json_response(JSONAPI::Serializer.serialize(@breeds, is_collection: true))
+    json_response(@breeds.page(params[:page]))
+
   end
 
   def show
