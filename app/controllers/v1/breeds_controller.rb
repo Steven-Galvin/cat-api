@@ -4,10 +4,11 @@ class V1::BreedsController < ApplicationController
   def index
     @breeds = Breed.all
     name = params[:name]
+    @breeds = Breed.name_search(name)
     # origin = params[:origin]
     # @breeds = Breed.origin(origin)
-    @breeds = Breed.name_search(name)
-    json_response(@breeds.page(params[:page]))
+    # json_response(@breeds.page(params[:page]))
+    json_response(JSONAPI::Serializer.serialize(@breeds, is_collection: true))
   end
 
   def show

@@ -22,6 +22,7 @@ gem 'rswag'
 gem 'kaminari'
 gem 'jwt'
 gem 'devise'
+gem 'jsonapi-serializers'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
