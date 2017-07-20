@@ -8,11 +8,11 @@
 
 # _Endpoints_
 
-* _`Get` /v1/breeds_
-* _`Get` /v1/breeds/:id_
-* _`Get` /v1/breeds/?attr_name=search_params_
-<!-- * _`Get` /v1/breeds/?attr_name=_ -->
-
+* _`Get` /v1/breeds?api_id=<api_key>_
+* _`Get` /v1/breeds/:id?api_id=<api_key>_
+* _`Get` /v1/breeds/?name=<search_params>&api_id=<api_key>_
+* _`Get` /v1/breeds/?origin=<search_params>&api_id=<api_key>_
+* _`Put` /v1/breeds/:id/?attr=<attribute_update>&api_id=<api_key>_
 
 ## Setup/Installation Requirements
 
