@@ -2,13 +2,14 @@ class V1::BreedsController < ApplicationController
   before_action :authenticate_request!, except: [:index, :show]
 
   def index
-    @breeds = Breed.all
-    name = params[:name]
-    @breeds = Breed.name_search(name)
-    # origin = params[:origin]
-    # @breeds = Breed.origin(origin)
+    if name = params[:name]
+      @breeds = Breed.name_search(name)
+    elsif origin = params[:origin]
+      @breeds = Breed.origin_search(origin)
+    else
+      @breeds = Breed.all
+    end
     json_response(@breeds.page(params[:page]))
-
   end
 
   def show

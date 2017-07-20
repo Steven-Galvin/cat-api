@@ -9,7 +9,7 @@ class Seed
   def generate_breeds
     Breed.create!(
       name: "Ragdoll",
-      origin: "United States of America",
+      origin: "America",
       common_name: "Ragdoll",
       characteristics: "The Ragdoll is a cat breed with blue eyes and a distinct colorpoint coat. It is a large and muscular semi-longhair cat with a soft and silky coat. Like all long haired cats, Ragdolls need grooming to ensure their fur does not mat.",
       image: "https://en.wikipedia.org/wiki/Ragdoll#/media/File:Ragdoll_from_Gatil_Ragbelas.jpg",
@@ -49,7 +49,7 @@ class Seed
     )
     Breed.create!(
       name: "Maine Coon",
-      origin: "United States of America",
+      origin: "America",
       common_name: "Gentle giants",
       characteristics: "The Maine Coon is one of the largest domesticated breeds of cat. It has a distinctive physical appearance and valuable hunting skills.",
       image: "https://en.wikipedia.org/wiki/Maine_Coon#/media/File:Maine_Coon_cat_by_Tomitheos.JPG",
@@ -59,7 +59,7 @@ class Seed
     )
     Breed.create!(
       name: "American Shorthair",
-      origin: "United States of America",
+      origin: "America",
       common_name: "American Shorthair",
       characteristics: "Although it is not an extremely athletic cat, the American Shorthair has a large, powerfully-built body. According to the breed standard of the Cat Fanciers' Association, the American Shorthair is a true breed of working cat. They have round faces and short ears.",
       image: "https://en.wikipedia.org/wiki/American_Shorthair#/media/File:14_years_old_american_shorthair.jpg",
@@ -89,7 +89,7 @@ class Seed
     )
     Breed.create!(
       name: "Bengal cat",
-      origin: "United States",
+      origin: "America",
       common_name: "Leopard cat",
       characteristics: "The Bengal is a domestic cat breed developed to act like exotic jungle cats such as leopards, ocelots, margays and clouded leopards.",
       image: "https://en.wikipedia.org/wiki/Bengal_cat#/media/File:Bangie_the_Bengal_Cat.jpg",
@@ -109,7 +109,7 @@ class Seed
     )
     Breed.create!(
       name: "Exotic Shorthair",
-      origin: "United States of America",
+      origin: "America",
       common_name: "Exotic Shorthair",
       characteristics: "The Exotic Shorthair is a breed of cat developed to be a short-haired version of the Persian. The Exotic is similar to the Persian in many ways, including temperament and conformation, a flat nose and face with the exception of the short dense coat.",
       image: "https://en.wikipedia.org/wiki/Exotic_Shorthair#/media/File:Brown_Exotic_Shorthair_Kitten.jpg",
