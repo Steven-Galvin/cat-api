@@ -1,5 +1,5 @@
 class V1::BreedsController < ApplicationController
-  before_action :authenticate_request!
+  before_action :authenticate_request!, except: [:index, :show]
 
   def index
     @breeds = Breed.all

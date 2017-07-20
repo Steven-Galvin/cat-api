@@ -1,9 +1,7 @@
 require 'swagger_helper'
 
 describe 'Breeds API' do
-
-  path '/v1/breeds' do
-
+  path "/v1/breeds" do
     post 'Creates a breed' do
       tags 'Breeds'
       consumes 'application/json', 'application/xml'
@@ -21,16 +19,6 @@ describe 'Breeds API' do
         },
         required: [ 'name', 'origin', 'common_name', 'characteristics', 'image', 'fun_fact', 'variations', 'history' ]
       }
-
-      response '201', 'breed created' do
-        let(:breed) { { name: 'cat', origin: 'here', common_name: 'kitty', characteristics: 'mellow', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Britishblue.jpg/800px-Britishblue.jpg', fun_fact: 'pretty cool fact', variations: 'calico', history: "came from lions" } }
-        run_test!
-      end
-
-      # response '422', 'invalid request' do
-      #   let(:breed) { { name: 'cat' } }
-      #   run_test!
-      # end
     end
   end
 

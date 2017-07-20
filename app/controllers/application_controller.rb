@@ -21,8 +21,8 @@ attr_reader :current_user
 
   private
   def http_token
-     @http_token ||= if request.headers['Authorization'].present?
-       request.headers['Authorization'].split(' ').last
+     @http_token ||= if request.params['app_id'].present?
+       request.params['app_id'].split(' ').last
      end
   end
 

@@ -30,7 +30,9 @@ end
 # end
 
 
-# helper method avail to specs 
+# helper method avail to specs
 def jsonParse
   JSON.parse(response.body)
 end
+
+User.destroy_all

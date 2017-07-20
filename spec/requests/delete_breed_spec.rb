@@ -1,10 +1,17 @@
 require 'rails_helper'
 
 describe "destroy breed route", type: :request do
+
   before do
     @breed1 = FactoryGirl.create(:breed)
     @breed2 = FactoryGirl.create(:breed)
-    delete "/v1/breeds/#{@breed1.id}"
+    @user = FactoryGirl.create(:user)
+    post '/v1/auth_user', params: {
+      email: @user.email,
+      password: @user.password
+    }
+    @user_api_key = JSON.parse(response.body)["auth_token"]
+    delete "/v1/breeds/#{@breed1.id}?app_id=#{@user_api_key}"
   end
 
   it 'should return status 200' do
