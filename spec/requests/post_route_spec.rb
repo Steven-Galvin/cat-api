@@ -1,8 +1,5 @@
 require 'rails_helper'
 
-
-
-
 describe "post a breed route", type: :request do
 
   before do
